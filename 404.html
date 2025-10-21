@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Динислам Батталов | Бизнес и жизнь в Саудовской Аравии</title>
+ <!-- Загрузка index.html для инициализации SPA -->
+  <script>
+    // Восстановление оригинального пути для React Router
+    // При 404 ошибке GitHub Pages отдает этот файл, но адрес в строке браузера остается тем, который не был найден
+    // Мы меняем его на /index.html, чтобы загрузить приложение, но сохраняем оригинальный путь
+    const originalPath = window.location.pathname + window.location.search + window.location.hash;
+    // Заменяем текущую историю на /, чтобы избежать циклического 404
+    window.history.replaceState(null, null, '/');
+    // Загружаем index.html, который содержит наше React-приложение
+    window.location.href = '/index.html';
+  </script>
+</head>
+<body>
+  <!-- Резервный контент на случай, если JavaScript отключен -->
+  <h1>Страница не найдена</h1>
+  <p>Загрузка главной страницы...</p>
+  <a href="/">Перейти на главную</a>
+</body>
+</html>
